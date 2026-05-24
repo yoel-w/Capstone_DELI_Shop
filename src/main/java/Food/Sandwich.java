@@ -33,5 +33,15 @@ public class Sandwich {
     public void addTopping(Topping topping) {
         toppings.add(topping);
     }
+    private double getBreadPrice()
+    {
+    if (size == 4)
+        return 5.50;
+    if (size == 8)
+        return 7.00;
+    if (size == 12)
+        return 8.50;
+    return 0;
+    }
 
 }

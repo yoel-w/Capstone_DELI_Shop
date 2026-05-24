@@ -10,7 +10,7 @@ public class TitlePage {
 
             sound.setFile(0);
             playMusic(0);
-            TitlePage tp = new TitlePage();
+            TitlePage TitlePage = new TitlePage();
             String choice;
             String choice2 = "";
             Scanner sc = new Scanner(System.in);
