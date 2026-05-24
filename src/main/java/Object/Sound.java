@@ -11,7 +11,7 @@ public class Sound {
     URL soundURL[] = new URL [1];
 
     public Sound() {
-        soundURL[0] = getClass().getResource("/placeholder/deli.wav");
+        soundURL[0] = getClass().getResource("/Music/deli.wav");
         if (soundURL[0] == null) {
             System.err.println("ERROR: Sound Resource not found!");
 
