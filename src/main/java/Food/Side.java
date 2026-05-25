@@ -22,7 +22,6 @@ public class Side {
     public String getSize() {
         return size;
     }
-
     public double getChipsPrice() {
         if (type.equals("Chips")) {
             return 1.50;
@@ -31,16 +30,22 @@ public class Side {
     }
     public double getDrinkPrice() {
         switch (size.toLowerCase()) {
-            case "small":
-            return 2.00;
-            case "medium":
+            case "Small":
+                return 2.00;
+            case "Medium":
                 return 2.50;
-                case "large":
-                    return 3.00;
-                    default:
-                        return 0;
+            case "Large":
+                return 3.00;
+            default:
+                return 0;
 
         }
+    }
+    public double getSides() {
+        if (type.equals("Sides")) {
+            return 0;
+        }
+        return 0;
     }
 
 

@@ -3,20 +3,20 @@ package Food;
 import java.util.ArrayList;
 
 public class Sandwich {
-    private int size;
+    private int breadSize;
     private String breadType;
     private boolean isToasted;
     private ArrayList<Topping> toppings;
 
-    public Sandwich(int size, String breadType, boolean isToasted, ArrayList<Topping> toppings) {
-        this.size = size;
+    public Sandwich(int breadSize, String breadType, boolean isToasted) {
+        this.breadSize = breadSize;
         this.breadType = breadType;
         this.isToasted = isToasted;
         this.toppings = toppings;
     }
 
-    public int getSize() {
-        return size;
+    public int getBreadSize() {
+        return breadSize;
     }
 
     public String getBreadType() {
@@ -35,11 +35,11 @@ public class Sandwich {
     }
     private double getBreadPrice()
     {
-    if (size == 4)
+    if (breadSize == 4)
         return 5.50;
-    if (size == 8)
+    if (breadSize == 8)
         return 7.00;
-    if (size == 12)
+    if (breadSize == 12)
         return 8.50;
     return 0;
     }

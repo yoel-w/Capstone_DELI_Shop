@@ -1,14 +1,12 @@
 package Food;
 
-public class Topping {
+public abstract class Topping {
 
-private String name;
-private String toppingType;
-private boolean isExtra;
+protected String name;
+protected boolean isExtra;
 
-    public Topping(String name, String toppingType, boolean isExtra) {
+    public Topping(String name, boolean isExtra) {
         this.name = name;
-        this.toppingType = toppingType;
         this.isExtra = isExtra;
     }
 
@@ -16,14 +14,11 @@ private boolean isExtra;
         return name;
     }
 
-    public String getToppingType() {
-        return toppingType;
-    }
-
     public boolean isExtra() {
         return isExtra;
     }
 
+    public abstract double getPrice();
 
 }
 
