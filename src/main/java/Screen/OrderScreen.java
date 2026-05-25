@@ -52,6 +52,7 @@ OrderScreen orderScreen = new OrderScreen();
     private void addSandwich() {
         String breadType;
         String breadSize;
+        boolean isToasted;
         System.out.println("What kind of bread would you like?");
         System.out.println("-------------------------");
         System.out.println("");
@@ -77,11 +78,81 @@ OrderScreen orderScreen = new OrderScreen();
                             default:
                                 System.out.println("Invalid Choice. Please try again.");
         }
-    }
+
+        System.out.println("");
+        System.out.println("-----------------------------------------");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("What size would you like?");
+        System.out.println("----------------------------------------");
+        System.out.println("");
+        System.out.println("1) 4 in");
+        System.out.println("2) 8 in");
+        System.out.println("3) 12 in");
+        System.out.println("");
+        System.out.print("Selection: ");
+        switch(breadType = scanner.nextLine()) {
+            case "1":
+                breadSize = "4";
+                break;
+                case "2":
+                    breadSize = "8";
+                    break;
+                    case "3":
+                        breadSize = "12";
+                        break;
+                        default:
+                            System.out.println("Invalid Choice. Please try again.");
+        }
+        System.out.println("");
+        System.out.println("-----------------------------------------");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("Would you like your sandwich toasted?");
+        System.out.println("---------------------------------------");
+        System.out.println("");
+        System.out.println("1) Yes");
+        System.out.println("2) No");
+        System.out.println("");
+        System.out.print("Selection: ");
+
+        }
+
+
     private void addDrink() {
+        String drinkSize;
+        System.out.println("What drink size would you like?");
+        System.out.println("--------------------------------------");
+        System.out.println("");
+        System.out.println("1) Small - $2.00");
+        System.out.println("2) Medium - $2.50");
+        System.out.println("3) Large - $3.00");
+        System.out.println("4) Cancel");
+        System.out.println("");
+        System.out.print("Selection: ");
+        switch(scanner.nextLine()) {
+            case "1":
+                drinkSize = "small";
+                break;
+                case "2":
+                    drinkSize = "medium";
+                    break;
+                    case "3":
+                    drinkSize = "large";
+                    break;
+                    case "4":
+                        return;
+                        default:
+                        System.out.println("Invalid Choice. Please try again.");
+        }
 
     }
     private void addChips() {
+
+        System.out.println("Would you like some chips for $1.50?");
+        System.out.println("--------------------------------------");
+        System.out.println("");
+
 
     }
 
