@@ -18,7 +18,7 @@ protected boolean isExtra;
         return isExtra;
     }
 
-    public abstract double getPrice();
+    public abstract double getPrice(int sandwichSize);
 
 }
 

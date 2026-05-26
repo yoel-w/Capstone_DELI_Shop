@@ -6,7 +6,7 @@ public class FreeTopping extends Topping{
     }
 
     @Override
-    public double getPrice() {
-        return getPrice();
+    public double getPrice(int sandwichSize) {
+        return 0.00;
     }
 }

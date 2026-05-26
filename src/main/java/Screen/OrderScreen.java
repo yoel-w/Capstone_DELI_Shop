@@ -125,6 +125,7 @@ OrderScreen orderScreen = new OrderScreen();
         addCheese(sandwich);
         addRegToppings(sandwich);
         addSauces(sandwich);
+        addSides(sandwich);
         }
 
         private void addMeat(Sandwich sandwich) {
@@ -178,12 +179,21 @@ OrderScreen orderScreen = new OrderScreen();
 
     }
     private void addRegToppings(Sandwich sandwich) {
+        String[] regTopping = {"Lettuce", "Peppers", "Onions", "Tomatoes", "Jalapenos",
+                "Cucumbers", "Pickles", "Guacamole", "Mushrooms", "Spinach", "Pepper Relish",
+                "Banana Peppers", "olives", };
 
     }
     private void addSauces(Sandwich sandwich) {
         String[] sauce = {"Mayo","Mustard", "Honey Mustard", "Ketchup", "Ranch", "Thousand Islands"
-                ,"Vinaigrette", "Hummus", "Tahini", "None"};
+                ,"Vinaigrette", "Hummus", "Tahini", "Spicy Mayo", "Vegan Mayo", "Vegan Spicy Mayo",
+                "None"};
     }
+
+    private void addSides(Sandwich sandwich) {
+
+    }
+
 
     private void addDrink() {
         String drinkSize;
@@ -217,12 +227,28 @@ OrderScreen orderScreen = new OrderScreen();
 
     }
     private void addChips() {
+        String chips;
 
         System.out.println("Would you like some chips for $1.50?");
         System.out.println("--------------------------------------");
         System.out.println("");
+        System.out.println("1) Yes");
+        System.out.println("2) No");
+        System.out.println("");
+        System.out.print("Selection: ");
+       switch(scanner.nextLine()) {
+           case "1":
+               chips = "yes";
+               System.out.println("Chips have been added!");
+               break;
+               case "2":
+                   chips = "no";
+                   System.out.println("No chips have been added!");
+                   break;
+                   default:
+                       System.out.println("Invalid Choice. Please try again.");
+       }
         return;
-
     }
 
 
