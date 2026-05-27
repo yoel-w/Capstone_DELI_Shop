@@ -41,12 +41,6 @@ public class Side {
 
         }
     }
-    public double getSides() {
-        if (type.equals("Sides")) {
-            return 0;
-        }
-        return 0;
-    }
 
 
 }

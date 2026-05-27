@@ -12,7 +12,6 @@ public class Sandwich {
         this.breadSize = breadSize;
         this.breadType = breadType;
         this.isToasted = isToasted;
-        this.toppings = toppings;
     }
 
     public int getBreadSize() {
@@ -33,7 +32,7 @@ public class Sandwich {
     public void addTopping(Topping topping) {
         toppings.add(topping);
     }
-    private double getBreadPrice()
+    private double getPrice()
     {
     if (breadSize == 4)
         return 5.50;
@@ -42,6 +41,14 @@ public class Sandwich {
     if (breadSize == 12)
         return 8.50;
     return 0;
+    }
+
+    public double getTotalPrice() {
+        double total = getPrice();
+        for (Topping topping : toppings) {
+            total += topping.getPrice(this.breadSize);
+        }
+        return total;
     }
 
 }

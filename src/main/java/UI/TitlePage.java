@@ -1,4 +1,4 @@
-package Screen;
+package UI;
 
 
 import Object.Sound;
@@ -24,15 +24,19 @@ public class TitlePage {
 
             System.out.println("1) New Order");
             System.out.println("0) Exit");
+            System.out.println("");
+            System.out.print("Enter your choice: ");
             choice = scanner.nextLine();
             switch (choice) {
                 case "1":
-                    OrderScreen.main();
+                    OrderScreen.main(scanner);
                     break;
                 case "0":
-                    System.out.print("Are you sure you want to exit? ");
+                    System.out.println("Are you sure you want to exit? ");
                     System.out.println("Y) Yes");
                     System.out.println("N) Go Back");
+                    System.out.println("");
+                    System.out.print("Enter your choice: ");
                     choice2 = scanner.nextLine().toLowerCase();
                     if (choice2.equals("yes")) {
                         System.out.println("Thank you for visiting Spice Deli! ");
