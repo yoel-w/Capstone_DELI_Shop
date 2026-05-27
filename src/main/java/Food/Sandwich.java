@@ -3,9 +3,9 @@ package Food;
 import java.util.ArrayList;
 
 public class Sandwich {
-    private int breadSize;
-    private String breadType;
-    private boolean isToasted;
+    private final int breadSize;
+    private final String breadType;
+    private final boolean isToasted;
     private ArrayList<Topping> toppings;
 
     public Sandwich(int breadSize, String breadType, boolean isToasted) {

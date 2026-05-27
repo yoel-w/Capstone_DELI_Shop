@@ -31,7 +31,6 @@ orderScreen.ordering();
         System.out.println("3) Add Chips");
         System.out.println("4) Checkout");
         System.out.println("5) Review Order");
-        System.out.println("0) Cancel Order");
         System.out.println("");
         System.out.print("Selection: ");
         choice = scanner.nextLine();
@@ -51,9 +50,6 @@ orderScreen.ordering();
                             case "5":
                                 ReviewScreen.main();
                                 break;
-                                case "0":
-                                    //pending
-                                    break;
                                     default:
                                         System.out.println("Invalid Choice. Please try again.");
         }
