@@ -36,11 +36,11 @@ public class ReceiptReview {
             order.append("Drinks & Chips: ");
             for (Side side : sides) {
                 String liquid = side.type();
-                String label = liquid.equals("drink")
-                        ? side.size() + " " + side.name()
-                        : side.name() + " (chips)";
-                double price = liquid.equals("drink") ? side.getDrinkPrice() : side.getChipsPrice();
-                order.append(label +  String.format("%.2f", price));
+                String label = liquid.equals("Drink")
+                        ? side.size() + " " + side.type()
+                        : side.type() + " (chips)";
+                double price = liquid.equals("Drink") ? side.getDrinkPrice() : side.getChipsPrice();
+                order.append(label + " $" + String.format("%.2f", price));
             }
         }
         return order.toString();
@@ -48,9 +48,9 @@ public class ReceiptReview {
 
     public static void save(ArrayList<Sandwich> sandwiches, ArrayList<Side> sides){
         try  {
-                Files.createDirectories(Paths.get("src/main/java/Receipts"));
-                LocalDateTime dateTime = LocalDateTime.now();
-                String FileName = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss").format(dateTime);
+            Files.createDirectories(Paths.get("src/main/java/Receipts"));
+            LocalDateTime dateTime = LocalDateTime.now();
+            String FileName = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss").format(dateTime);
 
         } catch (RuntimeException | IOException e) {
             throw new RuntimeException(e);

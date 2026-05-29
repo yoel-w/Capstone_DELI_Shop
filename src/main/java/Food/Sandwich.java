@@ -6,7 +6,7 @@ public class Sandwich {
     private final int breadSize;
     private final String breadType;
     private final boolean isToasted;
-    private ArrayList<Topping> toppings;
+    private ArrayList<Topping> toppings =  new ArrayList<>();
 
     public Sandwich(int breadSize, String breadType, boolean isToasted) {
         this.breadSize = breadSize;

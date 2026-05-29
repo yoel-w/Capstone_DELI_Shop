@@ -13,15 +13,14 @@ public class TitlePage {
     }
 
     public void HomeScreen() {
-
-            sound.setFile(0);
-            playMusic(0);
-            String choice;
-            String choice2;
-            Scanner scanner = new Scanner(System.in);
-            //Welcome sign for the app
-
-
+        sound.setFile(0);
+        playMusic(0);
+        String choice;
+        String choice2;
+        Scanner scanner = new Scanner(System.in);
+        boolean running = true;
+        while (running) {
+            //fonts/sign somewhere
             System.out.println("1) New Order");
             System.out.println("0) Exit");
             System.out.println("");
@@ -29,26 +28,36 @@ public class TitlePage {
             choice = scanner.nextLine();
             switch (choice) {
                 case "1":
+                    stopMusic();
                     OrderScreen.main(scanner);
                     break;
                 case "0":
-                    System.out.println("Are you sure you want to exit? ");
-                    System.out.println("Y) Yes");
-                    System.out.println("N) Go Back");
-                    System.out.println("");
-                    System.out.print("Enter your choice: ");
-                    choice2 = scanner.nextLine().toLowerCase();
-                    if (choice2.equals("yes")) {
-                        System.out.println("Thank you for visiting Spice Deli! ");
-                    }
-                    else {
-                        return;
+                    boolean exitMenu = true;
+                    while (exitMenu) {
+                        System.out.println("Are you sure you want to exit? ");
+                        System.out.println("Y) Yes");
+                        System.out.println("N) Go Back");
+                        System.out.println("");
+                        System.out.print("Enter your choice: ");
+                        choice2 = scanner.nextLine().toLowerCase();
+                        if (choice2.equals("y")) {
+                            System.out.println("Thank you for visiting Spice Deli! ");
+                            running = false;
+                            exitMenu = false;
+                        } else if (choice2.equals("n")) {
+                            exitMenu = false;
+                        } else {
+                            System.out.println("");
+                            System.out.println("Invalid selection. Please try again");
+                            System.out.println("");
+                        }
                     }
                     break;
-                    default:
-                        System.out.println("Invalid selection. Please try again");
+                default:
+                    System.out.println("Invalid selection. Please try again");
             }
         }
+    }
 
 
     Sound sound = new Sound();
