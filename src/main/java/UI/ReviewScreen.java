@@ -19,7 +19,7 @@ public class ReviewScreen {
     }
 
     public void show() {
-        System.out.println("--- Order Review ---");
+        System.out.println("\n--- Order Review ---");
         System.out.println(ReceiptReview.finalOrder(sandwiches, sides));
         System.out.println("--------------------\n");
     }

@@ -32,19 +32,19 @@ public class Sandwich {
     public void addTopping(Topping topping) {
         toppings.add(topping);
     }
-    private double getPrice()
+    public double getBasePrice()
     {
-    if (breadSize == 4)
-        return 5.50;
-    if (breadSize == 8)
-        return 7.00;
-    if (breadSize == 12)
-        return 8.50;
-    return 0;
+        if (breadSize == 4)
+            return 5.50;
+        if (breadSize == 8)
+            return 7.00;
+        if (breadSize == 12)
+            return 8.50;
+        return 0;
     }
 
     public double getTotalPrice() {
-        double total = getPrice();
+        double total = getBasePrice();
         for (Topping topping : toppings) {
             total += topping.getPrice(this.breadSize);
         }
